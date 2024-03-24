@@ -1,0 +1,17 @@
+Title: Lorem ipsum
+
+----
+
+Fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"key":"upload","label":"File","allowmultiple":"true","maxsize":1,"allowedtypes":"documents","required":"false","errormessage":""},"id":"9945e3de-a80f-400b-8c4d-b46c8ddf9783","isHidden":false,"type":"file-upload-field"},{"content":{"label":"Continue"},"id":"c1dd9a78-51d1-464d-8f57-860771e4b0f2","isHidden":false,"type":"button-field"}],"id":"863f6d38-d22e-4e8c-b481-1d14afb875ce","width":"1/1"}],"id":"8a8c2b80-c9fd-44c5-a18c-86b2b59afd3d"},{"attrs":[],"columns":[{"blocks":[],"id":"2f3f0798-c855-4351-ae8e-a1fa8b18cab7","width":"dreamform-page"}],"id":"5857ac40-a3e4-4c0f-afd8-cf7b300fd23a"},{"attrs":[],"columns":[{"blocks":[{"content":{"key":"test","label":"What's the page about?","placeholder":"","required":"false","errormessage":""},"id":"866314b8-05ba-433e-8edc-b7e3ae13f248","isHidden":false,"type":"text-field"},{"content":{"label":"Submit"},"id":"822fac2e-999a-4c20-a047-f06b7d0775a0","isHidden":false,"type":"button-field"}],"id":"6550d1fa-e1be-4b00-8062-b0b43b23ed46","width":"1/1"}],"id":"927cb40c-713c-4e05-9cbd-a6b808289007"}]
+
+----
+
+Actions: 
+
+----
+
+Pages: [{"content":{"fields":""},"id":"5e61afb0-5806-4a1b-85ae-e2648d25bb15","isHidden":false,"type":"page"},{"content":{"fields":""},"id":"6b11145b-9c23-497e-8026-390036494c11","isHidden":false,"type":"page"}]
+
+----
+
+Uuid: ekkXHUKzowygYdF3

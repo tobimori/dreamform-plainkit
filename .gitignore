@@ -1,0 +1,63 @@
+# System files
+# ------------
+
+Icon
+.DS_Store
+
+# Temporary files
+# ---------------
+
+/media/*
+!/media/.gitkeep
+
+# Lock files
+# ---------------
+
+.lock
+
+# Editors
+# (sensitive workspace files)
+# ---------------------------
+*.sublime-workspace
+/.vscode
+/.idea
+
+# Plugins
+# ---------------
+
+/site/plugins/*
+/vendor/*
+/kirby/*
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+# Cache Files
+# ---------------
+
+/site/cache/*
+!/site/cache/.gitkeep
+
+# Accounts
+# ---------------
+
+/site/accounts/*
+!/site/accounts/.gitkeep
+
+# Sessions
+# ---------------
+
+/site/sessions/*
+!/site/sessions/.gitkeep
+
+# Submissions
+# ---------------
+
+/content/forms/*/*
+!/content/forms/*/form.txt
+
+# License
+# ---------------
+
+/site/config/.license
