@@ -9,5 +9,9 @@ return [
     'forms' => Menu::forms(),
     'users',
     'system'
-  ]
+  ],
+  'lukaskleinschmidt.laravel-vite' => [
+    'hotFile' => 'vite.hot',
+    'buildDirectory' => 'dist'
+  ],
 ];

@@ -28,6 +28,9 @@ Icon
 /site/plugins/*
 /vendor/*
 /kirby/*
+node_modules
+dist
+vite.hot
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!

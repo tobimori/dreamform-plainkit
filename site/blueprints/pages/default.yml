@@ -8,8 +8,11 @@ columns:
         type: fields
         fields:
           text:
-            type: textarea
-            size: huge
+            toolbar:
+              inline: false
+            type: writer
+            inline: true
+          form: dreamform/fields/form
   sidebar:
     width: 1/3
     sections:
@@ -18,4 +21,3 @@ columns:
         template: default
       files:
         type: files
-

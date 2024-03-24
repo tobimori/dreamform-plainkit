@@ -1,0 +1,13 @@
+Title: DreamForm Demo ✨
+
+----
+
+Text: This is the example demo plainkit for DreamForm integrated in a Kirby site with TailwindCSS and HTMX.
+
+----
+
+Form: - page://ekkXHUKzowygYdF3
+
+----
+
+Uuid: dcuZ7H2U7PhJm2Db

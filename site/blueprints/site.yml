@@ -3,3 +3,7 @@ title: Site
 sections:
   pages:
     type: pages
+    templates:
+      - home
+      - error
+      - default
