@@ -22,9 +22,9 @@ snippet('layout', slots: true) ?>
         'row' => ['class' => 'gap-4 mb-4'],
         'field' => ['class' => 'group flex flex-col items-start mb-4 last:mb-0'],
         'label' => ['class' => 'text-sm font-medium text-slate-600 mb-1'],
-        'input' => ['class' => 'group-data-[has-error]:mb-2 shadow-sm group-data-[has-error]:border-red-500 w-full border border-gray-200 rounded p-2'],
-        'button' => ['class' => 'bg-indigo-600 text-white py-2 px-4 rounded shadow-sm hover:bg-indigo-800 transition-colors duration-200'],
-        'error' => ['class' => 'text-red-500 text-sm']
+        'input' => ['class' => 'peer group-data-[has-error]:placeholder-shown:mb-2 shadow-sm group-data-[has-error]:placeholder-shown:border-red-500 w-full border border-gray-200 rounded p-2'],
+        'button' => ['class' => 'ml-auto bg-indigo-600 text-white py-2 px-4 rounded shadow-sm hover:bg-indigo-800 transition-colors duration-200'],
+        'error' => ['class' => 'peer-[:not(:placeholder-shown)]:hidden text-red-500 text-sm']
       ]
     ]); ?>
   </div>

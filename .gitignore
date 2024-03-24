@@ -19,6 +19,7 @@ Icon
 # ---------------
 
 /site/plugins/*
+!/site/plugins/dreamform-demo
 /vendor/*
 /kirby/*
 node_modules
