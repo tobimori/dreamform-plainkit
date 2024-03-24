@@ -15,20 +15,17 @@ Icon
 
 .lock
 
-# Editors
-# (sensitive workspace files)
-# ---------------------------
-*.sublime-workspace
-/.vscode
-/.idea
-
-# Plugins
+# Vendor files
 # ---------------
 
 /site/plugins/*
 /vendor/*
 /kirby/*
 node_modules
+
+# Built assets
+# ---------------
+
 dist
 vite.hot
 
@@ -64,3 +61,8 @@ vite.hot
 # ---------------
 
 /site/config/.license
+
+# Environment
+# ---------------
+
+.env

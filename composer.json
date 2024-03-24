@@ -25,7 +25,8 @@
     "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
     "getkirby/cms": "^4.0",
     "genxbe/kirby3-ray": "^2.0",
-    "lukaskleinschmidt/kirby-laravel-vite": "^2.1"
+    "lukaskleinschmidt/kirby-laravel-vite": "^2.1",
+    "bnomei/kirby3-dotenv": "^2.2"
   },
   "config": {
     "allow-plugins": {
