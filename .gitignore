@@ -22,13 +22,6 @@ Icon
 !/site/plugins/dreamform-demo
 /vendor/*
 /kirby/*
-node_modules
-
-# Built assets
-# ---------------
-
-dist
-vite.hot
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!

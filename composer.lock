@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4be8fd2f37241773c0bf76dce233ec3f",
+    "content-hash": "cf9cc7586639cef186f20f399213c788",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -784,45 +784,6 @@
                 "source": "https://github.com/thephpleague/color-extractor/tree/0.4.0"
             },
             "time": "2022-09-24T15:57:16+00:00"
-        },
-        {
-            "name": "lukaskleinschmidt/kirby-laravel-vite",
-            "version": "2.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lukaskleinschmidt/kirby-laravel-vite.git",
-                "reference": "e6102c9ea6e79d7f72e2103ccfdeb1c17f8fbb55"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/lukaskleinschmidt/kirby-laravel-vite/zipball/e6102c9ea6e79d7f72e2103ccfdeb1c17f8fbb55",
-                "reference": "e6102c9ea6e79d7f72e2103ccfdeb1c17f8fbb55",
-                "shasum": ""
-            },
-            "require": {
-                "getkirby/composer-installer": "^1.2",
-                "php": "^8.2"
-            },
-            "type": "kirby-plugin",
-            "extra": {
-                "installer-name": "laravel-vite"
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Lukas Kleinschmidt",
-                    "email": "contact@kleinschmidt.mozmail.com"
-                }
-            ],
-            "description": "Kirby Laravel Vite",
-            "support": {
-                "issues": "https://github.com/lukaskleinschmidt/kirby-laravel-vite/issues",
-                "source": "https://github.com/lukaskleinschmidt/kirby-laravel-vite/tree/2.1.3"
-            },
-            "time": "2024-03-05T07:51:33+00:00"
         },
         {
             "name": "michelf/php-smartypants",
