@@ -3,45 +3,41 @@
 use tobimori\DreamForm\Support\Menu;
 
 return [
-  // Debug mode (this should be disabled in production)
-  'debug' => true,
-  'cache.pages' => [
-    'active' => true
-  ],
+	// Debug mode (this should be disabled in production)
+	'debug' => true,
 
-  // Settings for the DreamForm plugin
-  'tobimori.dreamform' => [
-    // custom layouts in 12 column grid
-    'layouts' => [
-      '1/1',
-      '1/2, 1/2',
-      '1/3, 2/3',
-      '2/3, 1/3'
-    ],
+	// Cache for speed ⚡
+	'cache.pages' => [
+		'active' => true
+	],
 
-    // enable htmx
-    'mode' => 'htmx',
-    'guards' => [
-      // disable csrf since we want to be sessionless
-      // so that the page can be cached
-      'available' => ['honeypot']
-    ],
+	// Settings for the DreamForm plugin
+	'tobimori.dreamform' => [
+		// custom layouts in 12 column grid
+		'layouts' => [
+			'1/1',
+			'1/2, 1/2',
+			'1/3, 2/3',
+			'2/3, 1/3'
+		],
 
-    // encryption secret for htmx attributes
-    'secret' => fn () => env('DREAMFORM_SECRET')
-  ],
+		// enable htmx
+		'mode' => 'htmx',
+		'guards' => [
+			// disable csrf since we want to be sessionless
+			// so that the page can be cached
+			'available' => ['honeypot']
+		],
 
-  // Custom menu to show forms in the panel sidebar
-  'panel.menu' => fn () => [
-    'site' => Menu::site(),
-    'forms' => Menu::forms(),
-    'users',
-    'system'
-  ],
+		// encryption secret for htmx attributes
+		'secret' => fn () => env('DREAMFORM_SECRET')
+	],
 
-  // Necessary for Vite bundling
-  'lukaskleinschmidt.laravel-vite' => [
-    'hotFile' => 'vite.hot',
-    'buildDirectory' => 'dist'
-  ],
+	// Custom menu to show forms in the panel sidebar
+	'panel.menu' => fn () => [
+		'site' => Menu::site(),
+		'forms' => Menu::forms(),
+		'users',
+		'system'
+	],
 ];

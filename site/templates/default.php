@@ -24,7 +24,23 @@ snippet('layout', slots: true) ?>
         'label' => ['class' => 'text-sm font-medium text-slate-600 mb-1'],
         'input' => ['class' => 'peer group-data-[has-error]:placeholder-shown:mb-2 shadow-sm group-data-[has-error]:placeholder-shown:border-red-500 w-full border border-gray-200 rounded p-2'],
         'button' => ['class' => 'ml-auto bg-indigo-600 text-white py-2 px-4 rounded shadow-sm hover:bg-indigo-800 transition-colors duration-200'],
-        'error' => ['class' => 'peer-[:not(:placeholder-shown)]:hidden text-red-500 text-sm']
+        'error' => ['class' => 'peer-[:not(:placeholder-shown)]:hidden text-red-500 text-sm'],
+        'radio' => [
+          'label' => ['class' => 'text-sm font-medium text-slate-600 mb-2'],
+          'input' => ['class' => 'w-4 rounded-full mr-2 shadow-sm border border-gray-200 '],
+          'error' => ['class' => 'group-has-[:checked]:hidden text-red-500 text-sm'],
+          'row' => ['class' => 'flex items-center mb-1 text-sm'],
+        ],
+        'checkbox' =>  [
+          'label' => ['class' => 'text-sm font-medium text-slate-600 mb-2'],
+          'input' => ['class' => 'w-4 mr-2 shadow-sm border border-gray-200 rounded'],
+          'error' => ['class' => 'group-has-[:checked]:hidden text-red-500 text-sm'],
+          'row' => ['class' => 'flex items-center mb-1 text-sm'],
+        ],
+        'file' => [
+          'input' => ['class' => 'mt-1 w-full border border-gray-200 group-data-[has-error]:mb-2 group-data-[has-error]:border-red-500 text-gray-600 shadow-sm rounded file:cursor-pointer file:transition-colors file:bg-gray-100 file:border-0 file:mr-3 file:py-2 file:px-4 file:hover:bg-gray-200'],
+          'row' => ['class' => 'flex items-center mb-1 text-sm'],
+        ]
       ]
     ]); ?>
   </div>

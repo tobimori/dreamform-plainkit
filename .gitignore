@@ -55,6 +55,7 @@ Icon
 # ---------------
 
 /site/config/.license
+/site/config/.dreamform_license
 
 # Environment
 # ---------------
