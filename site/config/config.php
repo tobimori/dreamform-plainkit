@@ -33,6 +33,19 @@ return [
 		'secret' => fn () => env('DREAMFORM_SECRET')
 	],
 
+	// Example email settings for Mailpit
+	'email' => [
+		'transport' => [
+			'type' => 'smtp',
+			'host' => 'localhost',
+			'port' => 1025,
+			'security' => false,
+			'auth' => false,
+			'username' => 'dreamform@andkindness.com',
+			'password' => 'dreamform'
+		]
+	],
+
 	// Custom menu to show forms in the panel sidebar
 	'panel.menu' => fn () => [
 		'site' => Menu::site(),
