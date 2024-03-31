@@ -13,7 +13,7 @@ return [
 
 	// Settings for the DreamForm plugin
 	'tobimori.dreamform' => [
-		// custom layouts in 12 column grid
+		// Custom layouts in 12 column grid
 		'layouts' => [
 			'1/1',
 			'1/2, 1/2',
@@ -21,11 +21,11 @@ return [
 			'2/3, 1/3'
 		],
 
-		// enable htmx
+		// Enable HTMX Mode
 		'mode' => 'htmx',
 		'guards' => [
-			// disable csrf since we want to be sessionless
-			// so that the page can be cached
+			// Disable CSRF since we want to be sessionless
+			// So that the page can be cached
 			'available' => ['honeypot']
 		],
 
@@ -34,6 +34,8 @@ return [
 	],
 
 	// Example email settings for Mailpit
+	// For local development, we're using Mailpit as email server
+	// For production, you should use a real email server
 	'email' => [
 		'transport' => [
 			'type' => 'smtp',
@@ -46,7 +48,7 @@ return [
 		]
 	],
 
-	// Custom menu to show forms in the panel sidebar
+	// Custom panel menu to show forms in the panel sidebar
 	'panel.menu' => fn () => [
 		'site' => Menu::site(),
 		'forms' => Menu::forms(),
