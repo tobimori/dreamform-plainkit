@@ -9,8 +9,7 @@ class LinkedInField extends Field
   {
     return [
       'title' => 'LinkedIn',
-      'label' => '{{ label }}',
-      'preview' => 'fields',
+      'preview' => 'text-field',
       'wysiwyg' => true,
       'icon' => 'linkedin',
       'tabs' => [

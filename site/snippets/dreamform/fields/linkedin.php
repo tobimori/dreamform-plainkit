@@ -13,5 +13,6 @@ snippet('dreamform/fields/text', [
   'block' => $block,
   'field' => $field,
   'form' => $form,
-  'attr' => $attr
+  'attr' => $attr,
+  'type' => 'url'
 ]);
