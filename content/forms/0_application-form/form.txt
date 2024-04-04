@@ -6,7 +6,7 @@ Fields: [{"attrs":[],"columns":[{"blocks":[{"content":{"key":"first-name","label
 
 ----
 
-Actions: [{"content":{"conditions":[{"field":"dd2f8076-b4ee-40f9-908b-84c9b55cb171","operator":"equals","value":"Dedede"}],"thatactions":"[{\"content\":{\"showerror\":\"true\",\"errormessage\":\"Sorry, no self-proclaimed kings allowed!\"},\"id\":\"0db69449-ab93-4f0d-a263-33c2f3d68191\",\"isHidden\":false,\"type\":\"abort-action\"}]","elseactions":"[{\"content\":{\"sendto\":\"static\",\"sendtofield\":\"\",\"sendtostatic\":\"submissions@andkindness.com\",\"replyto\":\"field\",\"replytofield\":\"42b4d27b-d9e2-401d-aef9-0ab12ef57b91\",\"replytostatic\":\"\",\"subject\":\"New form submission\",\"templatetype\":\"field\",\"kirbytemplate\":\"\",\"fieldtemplate\":\"\"},\"id\":\"4e661588-0540-436c-aa0b-2c33034b9ceb\",\"isHidden\":false,\"type\":\"email-action\"}]"},"id":"dcca8337-0093-4d22-ac03-a36ad75a6683","isHidden":false,"type":"conditional-action"}]
+Actions: 
 
 ----
 
