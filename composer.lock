@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf9cc7586639cef186f20f399213c788",
+    "content-hash": "6b8ff1cec611b031233e719048a36eb0",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -2248,6 +2248,58 @@
             "time": "2023-11-06T11:00:25+00:00"
         },
         {
+            "name": "tobimori/kirby-dreamform",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tobimori/kirby-dreamform.git",
+                "reference": "a86e38a27b05318117671f451d6967111f0c31d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tobimori/kirby-dreamform/zipball/a86e38a27b05318117671f451d6967111f0c31d4",
+                "reference": "a86e38a27b05318117671f451d6967111f0c31d4",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2.1",
+                "php": ">=8.2.0"
+            },
+            "default-branch": true,
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": false
+            },
+            "autoload": {
+                "psr-4": {
+                    "tobimori\\DreamForm\\": "classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Tobias Möritz",
+                    "email": "tobias@moeritz.io"
+                }
+            ],
+            "description": "Kirby DreamForm is an opiniated form builder plugin for Kirby CMS 4+ that makes forms work like magic",
+            "homepage": "https://plugins.andkindness.com/dreamform",
+            "support": {
+                "issues": "https://github.com/tobimori/kirby-dreamform/issues",
+                "source": "https://github.com/tobimori/kirby-dreamform/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://plugins.andkindness.com/dreamform/pricing",
+                    "type": "custom"
+                }
+            ],
+            "time": "2024-04-04T21:33:43+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.6.0",
             "source": {
@@ -2335,7 +2387,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "tobimori/kirby-dreamform": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
