@@ -14,6 +14,9 @@
 
   <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script>
+    htmx.logAll()
+  </script>
 </head>
 
 <body class="bg-gray-100 flex flex-col min-h-screen items-center">
