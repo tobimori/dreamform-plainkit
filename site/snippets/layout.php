@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title><?= $page->title() ?></title>
 
-  <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
   <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 </head>
 
