@@ -26,7 +26,7 @@
     "getkirby/cms": "^4.0",
     "genxbe/kirby3-ray": "^2.0",
     "bnomei/kirby3-dotenv": "^2.2",
-    "tobimori/kirby-dreamform": "dev-main"
+    "tobimori/kirby-dreamform": "^1"
   },
   "config": {
     "allow-plugins": {
