@@ -20,7 +20,7 @@
 	</script>
 </head>
 
-<body class="bg-gray-100 flex flex-col min-h-screen items-center">
+<body class="bg-gray-100 dark:bg-gray-900 flex flex-col min-h-screen items-center">
 	<?= $slot ?>
 </body>
 
