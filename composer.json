@@ -21,12 +21,16 @@
     "forum": "https://forum.getkirby.com",
     "source": "https://github.com/getkirby/starterkit"
   },
+  "minimum-stability": "RC",
   "require": {
-    "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
-    "getkirby/cms": "^4.0",
-    "genxbe/kirby3-ray": "^2.0",
+    "php": "~8.3.0 || ~8.4.0",
+    "getkirby/cms": "^5.0",
+    "genxbe/kirby-ray": "^2.0",
     "bnomei/kirby3-dotenv": "^2.2",
     "tobimori/kirby-dreamform": "^1"
+  },
+  "extra": {
+    "kirby-cms-path": false
   },
   "config": {
     "allow-plugins": {
