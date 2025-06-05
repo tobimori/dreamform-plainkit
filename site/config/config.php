@@ -23,6 +23,7 @@ return [
 
 		// Enable HTMX Mode
 		'mode' => 'htmx',
+		'precognition' => true,
 		'guards' => [
 			// Disable CSRF since we want to be sessionless
 			// So that the page can be cached
