@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "34cfb1f6b76e52ddbee52129313e6b2d",
+    "content-hash": "34671c9a09c5fc09f0df0b45b1b40d2a",
     "packages": [
         {
             "name": "bnomei/kirby3-dotenv",
@@ -343,16 +343,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.18.0",
+            "version": "2.18.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e"
+                "reference": "59a123a3d459c5a23055802237cb317f609867e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e",
-                "reference": "a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/59a123a3d459c5a23055802237cb317f609867e5",
+                "reference": "59a123a3d459c5a23055802237cb317f609867e5",
                 "shasum": ""
             },
             "require": {
@@ -402,7 +402,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.18.0"
+                "source": "https://github.com/filp/whoops/tree/2.18.3"
             },
             "funding": [
                 {
@@ -410,7 +410,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-15T12:00:00+00:00"
+            "time": "2025-06-16T00:02:10+00:00"
         },
         {
             "name": "genxbe/kirby-ray",
@@ -465,16 +465,16 @@
         },
         {
             "name": "getkirby/cms",
-            "version": "5.0.0-rc.3",
+            "version": "5.0.0-rc.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/getkirby/kirby.git",
-                "reference": "6dac5cd0e1d579685509d4306b2561962e06f013"
+                "reference": "eff9881fb1e4ac7b4f5d7d115f1d5f0a2d2c2a90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/getkirby/kirby/zipball/6dac5cd0e1d579685509d4306b2561962e06f013",
-                "reference": "6dac5cd0e1d579685509d4306b2561962e06f013",
+                "url": "https://api.github.com/repos/getkirby/kirby/zipball/eff9881fb1e4ac7b4f5d7d115f1d5f0a2d2c2a90",
+                "reference": "eff9881fb1e4ac7b4f5d7d115f1d5f0a2d2c2a90",
                 "shasum": ""
             },
             "require": {
@@ -492,7 +492,7 @@
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
                 "ext-simplexml": "*",
-                "filp/whoops": "2.18.0",
+                "filp/whoops": "2.18.3",
                 "getkirby/composer-installer": "^1.2.1",
                 "laminas/laminas-escaper": "2.17.0",
                 "michelf/php-smartypants": "1.8.1",
@@ -565,7 +565,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-06-03T11:50:31+00:00"
+            "time": "2025-06-20T08:55:05+00:00"
         },
         {
             "name": "getkirby/composer-installer",
@@ -2238,21 +2238,24 @@
         },
         {
             "name": "tobimori/kirby-dreamform",
-            "version": "1.5.0-rc.4",
+            "version": "2.0.0-rc.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tobimori/kirby-dreamform.git",
-                "reference": "67bc0d5615dd2e139102ac76091ad15dbf00b1f0"
+                "reference": "3b0452e70e3a78fef1e558deb2ee7813776a78b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tobimori/kirby-dreamform/zipball/67bc0d5615dd2e139102ac76091ad15dbf00b1f0",
-                "reference": "67bc0d5615dd2e139102ac76091ad15dbf00b1f0",
+                "url": "https://api.github.com/repos/tobimori/kirby-dreamform/zipball/3b0452e70e3a78fef1e558deb2ee7813776a78b9",
+                "reference": "3b0452e70e3a78fef1e558deb2ee7813776a78b9",
                 "shasum": ""
             },
             "require": {
                 "getkirby/composer-installer": "^1.2.1",
-                "php": ">=8.2.0"
+                "php": ">=8.3.0"
+            },
+            "require-dev": {
+                "getkirby/cms": "^5"
             },
             "type": "kirby-plugin",
             "extra": {
@@ -2277,7 +2280,7 @@
             "homepage": "https://plugins.andkindness.com/dreamform",
             "support": {
                 "issues": "https://github.com/tobimori/kirby-dreamform/issues",
-                "source": "https://github.com/tobimori/kirby-dreamform/tree/1.5.0-rc.4"
+                "source": "https://github.com/tobimori/kirby-dreamform/tree/2.0.0-rc.4"
             },
             "funding": [
                 {
@@ -2285,7 +2288,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2024-11-19T00:45:00+00:00"
+            "time": "2025-06-13T10:46:05+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
