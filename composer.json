@@ -27,7 +27,7 @@
     "getkirby/cms": "^5.0",
     "genxbe/kirby-ray": "^2.0",
     "bnomei/kirby3-dotenv": "^2.2",
-    "tobimori/kirby-dreamform": "^1"
+    "tobimori/kirby-dreamform": "^2.0"
   },
   "extra": {
     "kirby-cms-path": false
@@ -41,7 +41,7 @@
   "scripts": {
     "start": [
       "Composer\\Config::disableProcessTimeout",
-      "@php -S localhost:8000 kirby/router.php"
+      "@php -S localhost:8000 vendor/getkirby/cms/router.php"
     ]
   }
 }
