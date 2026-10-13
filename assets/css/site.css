@@ -1,0 +1,320 @@
+:root {
+	color-scheme: light dark;
+
+	--color-white: hsl(0, 0%, 100%);
+	--color-black: hsl(0, 0%, 0%);
+	--color-gray-200: hsl(0, 0%, 94%);
+	--color-gray-300: hsl(0, 0%, 88%);
+	--color-gray-500: hsl(0, 0%, 70%);
+	--color-gray-600: hsl(0, 0%, 60%);
+	--color-gray-700: hsl(0, 0%, 45%);
+	--color-gray-800: hsl(0, 0%, 30%);
+	--color-gray-850: hsl(0, 0%, 21%);
+	--color-gray-900: hsl(0, 0%, 15%);
+	--color-gray-950: hsl(0, 0%, 11%);
+	--color-red-400: hsl(0, 80%, 83%);
+	--color-red-600: hsl(0, 80%, 63%);
+	--color-red-700: hsl(0, 80%, 48%);
+	--color-red-900: hsl(0, 80%, 18%);
+	--color-green-400: hsl(80, 60%, 72%);
+	--color-green-500: hsl(80, 60%, 62%);
+	--color-green-900: hsl(80, 60%, 7%);
+	--color-blue-600: hsl(210, 65%, 63%);
+
+	--color-back: light-dark(var(--color-gray-200), var(--color-gray-900));
+	--color-item: light-dark(var(--color-white), var(--color-gray-850));
+	--color-text: light-dark(var(--color-black), var(--color-white));
+	--color-text-dimmed: light-dark(var(--color-gray-700), var(--color-gray-500));
+	--color-border: light-dark(var(--color-gray-300), var(--color-gray-800));
+	--color-negative: light-dark(var(--color-red-700), var(--color-red-600));
+	--color-positive: light-dark(var(--color-green-400), var(--color-green-500));
+	--color-focus: var(--color-blue-600);
+
+	--font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	--text-xs: 0.75rem;
+	--text-sm: 0.875rem;
+	--input-height: 2.25rem;
+	--rounded: 0.25rem;
+	--shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.025);
+	--outline: 2px solid var(--color-focus);
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+	border: 0;
+	font: inherit;
+	color: inherit;
+	background: none;
+}
+
+:focus-visible {
+	outline: var(--outline);
+}
+
+html {
+	background: var(--color-back);
+	color: var(--color-text);
+	font-family: var(--font-sans);
+	line-height: 1.5;
+}
+
+body {
+	font-size: var(--text-sm);
+}
+
+.view {
+	max-width: 50rem;
+	margin-inline: auto;
+	padding: 1.5rem 1.5rem 3rem;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	padding-block: 1rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid var(--color-border);
+
+	h1 {
+		font-size: 2em;
+		font-weight: 500;
+		line-height: 1.125;
+	}
+}
+
+.text {
+	max-width: 40rem;
+	margin-bottom: 3rem;
+	color: var(--color-text-dimmed);
+}
+
+.form,
+.form-column {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.form-row {
+	gap: 2rem 1.5rem;
+}
+
+@media (max-width: 40rem) {
+	.form-column {
+		/* dreamform sets the column span inline */
+		grid-column: 1 / -1 !important;
+	}
+}
+
+.field-label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+
+	em {
+		font-size: var(--text-xs);
+		font-style: normal;
+		color: var(--color-gray-500);
+
+		.field[data-has-error] & {
+			color: var(--color-negative);
+		}
+	}
+}
+
+.field-error {
+	display: block;
+	margin-top: 0.5rem;
+	color: var(--color-negative);
+}
+
+.input {
+	display: block;
+	width: 100%;
+	min-height: var(--input-height);
+	padding-inline: 0.5rem;
+	border-radius: var(--rounded);
+	outline: 1px solid var(--color-border);
+	background: var(--color-item);
+
+	&:focus {
+		outline: var(--outline);
+	}
+
+	.field[data-has-error] &:not(:focus) {
+		outline-color: var(--color-negative);
+	}
+
+	&::placeholder,
+	&:has(option[hidden]:checked) {
+		color: var(--color-gray-600);
+	}
+}
+
+textarea.input {
+	min-height: 7.5rem;
+	padding-block: 0.5rem;
+	resize: vertical;
+}
+
+select.input {
+	appearance: none;
+	padding-right: 2rem;
+	background: var(--color-item) no-repeat right 0.625rem center / 1rem;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23999'%3E%3Cpath d='M12 13.17l4.95-4.95 1.41 1.41L12 16 5.64 9.64l1.41-1.41z'/%3E%3C/svg%3E");
+}
+
+.input[type="file"] {
+	padding: 0.25rem;
+
+	&::file-selector-button {
+		height: 2rem;
+		margin-right: 0.75rem;
+		padding-inline: 0.75rem;
+		border: 0;
+		border-radius: var(--rounded);
+		background: light-dark(var(--color-gray-300), var(--color-gray-950));
+		color: inherit;
+		font: inherit;
+	}
+}
+
+.field-choices {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+	gap: 0.5rem;
+
+	.field-label,
+	.field-error {
+		grid-column: 1 / -1;
+		margin: 0;
+	}
+}
+
+.choice {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.5rem 0.75rem;
+	border-radius: var(--rounded);
+	background: var(--color-item);
+	box-shadow: var(--shadow);
+}
+
+.choice-label {
+	flex-grow: 1;
+	cursor: pointer;
+}
+
+.choice-input {
+	display: grid;
+	place-items: center;
+	flex-shrink: 0;
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid light-dark(var(--color-gray-500), var(--color-gray-300));
+	border-radius: 0.125rem;
+	box-shadow: var(--shadow);
+	appearance: none;
+	cursor: pointer;
+
+	&:checked {
+		border-color: var(--color-text);
+	}
+
+	&[type="radio"] {
+		border-radius: 50%;
+	}
+
+	&[type="checkbox"]:checked {
+		background: var(--color-text);
+
+		&::after {
+			content: "✓";
+			color: var(--color-back);
+			font-size: var(--text-xs);
+			font-weight: 700;
+			line-height: 1;
+		}
+	}
+
+	&[type="radio"]:checked::after {
+		content: "";
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background: var(--color-text);
+	}
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	height: var(--input-height);
+	padding-inline: 0.75rem;
+	border-radius: var(--rounded);
+	background: light-dark(var(--color-gray-300), var(--color-gray-950));
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+
+	&:hover {
+		filter: brightness(97%);
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: progress;
+	}
+
+	.field:has(> &) {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.button-positive {
+	background: var(--color-positive);
+	color: var(--color-green-900);
+}
+
+.button-dimmed {
+	background: none;
+	color: var(--color-text-dimmed);
+}
+
+.box,
+.form > .field-error {
+	padding: 0.5rem 0.75rem;
+	border-radius: var(--rounded);
+	background: var(--color-item);
+	line-height: 1.25;
+}
+
+.box > * + * {
+	margin-top: 0.5rem;
+}
+
+.box-positive {
+	background: var(--color-positive);
+	color: var(--color-green-900);
+}
+
+/* errors not tied to a field, e.g. from guards */
+.form > .field-error {
+	margin: 0;
+	background: var(--color-red-400);
+	color: var(--color-red-900);
+}

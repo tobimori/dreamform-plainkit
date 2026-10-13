@@ -11,6 +11,11 @@ return [
 		'active' => true
 	],
 
+	// content salt, also used as encryption secret for htmx attributes
+	'content' => [
+		'salt' => fn () => env('CONTENT_SALT')
+	],
+
 	// Settings for the DreamForm plugin
 	'tobimori.dreamform' => [
 		// Custom layouts in 12 column grid
@@ -21,17 +26,19 @@ return [
 			'2/3, 1/3'
 		],
 
-		// Enable HTMX Mode
+		// Enable HTMX 4 Mode
 		'mode' => 'htmx',
+		'htmx' => [
+			'version' => 4
+		],
 		'precognition' => true,
+		'hideEmptyErrors' => true,
+
 		'guards' => [
 			// Disable CSRF since we want to be sessionless
 			// So that the page can be cached
 			'available' => ['honeypot']
-		],
-
-		// encryption secret for htmx attributes
-		'secret' => fn () => env('DREAMFORM_SECRET')
+		]
 	],
 
 	// Example email settings for Mailpit

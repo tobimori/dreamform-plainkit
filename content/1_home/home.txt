@@ -2,7 +2,7 @@ Title: Job Application
 
 ----
 
-Text: This is the example demo plainkit for DreamForm integrated in a Kirby site with TailwindCSS and HTMX.
+Text: This is the example plainkit for DreamForm: a multi-step job application form, styled to look like the Kirby Panel and progressively enhanced with HTMX.
 
 ----
 

@@ -1,33 +1,25 @@
 {
-  "name": "getkirby/plainkit",
-  "description": "Kirby Plainkit",
+  "name": "tobimori/dreamform-plainkit",
+  "description": "Example Kirby site for DreamForm, styled like the Kirby Panel",
   "type": "project",
   "keywords": [
     "kirby",
     "cms",
-    "starterkit"
+    "dreamform",
+    "forms",
+    "htmx"
   ],
-  "authors": [
-    {
-      "name": "Bastian Allgeier",
-      "email": "bastian@getkirby.com",
-      "homepage": "https://getkirby.com"
-    }
-  ],
-  "homepage": "https://getkirby.com",
+  "homepage": "https://www.andkindness.com/dreamform",
   "support": {
-    "email": "support@getkirby.com",
-    "issues": "https://github.com/getkirby/starterkit/issues",
-    "forum": "https://forum.getkirby.com",
-    "source": "https://github.com/getkirby/starterkit"
+    "docs": "https://www.andkindness.com/dreamform/docs",
+    "source": "https://github.com/tobimori/dreamform-plainkit"
   },
-  "minimum-stability": "RC",
+  "minimum-stability": "stable",
   "require": {
-    "php": "~8.3.0 || ~8.4.0",
-    "getkirby/cms": "^5.0",
-    "genxbe/kirby-ray": "^2.0",
-    "bnomei/kirby3-dotenv": "^2.2",
-    "tobimori/kirby-dreamform": "^2.0"
+    "php": "~8.3.0 || ~8.4.0 || ~8.5.0",
+    "getkirby/cms": "^5.6",
+    "bnomei/kirby3-dotenv": "^5.1",
+    "tobimori/kirby-dreamform": "^2.3"
   },
   "extra": {
     "kirby-cms-path": false
@@ -39,6 +31,9 @@
     "optimize-autoloader": true
   },
   "scripts": {
+    "post-install-cmd": [
+      "@php -r \"file_exists('.env') || file_put_contents('.env', 'CONTENT_SALT=' . bin2hex(random_bytes(32)) . PHP_EOL);\""
+    ],
     "start": [
       "Composer\\Config::disableProcessTimeout",
       "@php -S localhost:8000 vendor/getkirby/cms/router.php"

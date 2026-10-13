@@ -1,5 +1,16 @@
-<div>
-  Thank you for your submission!
+<?php
 
-  (This is a custom success snippet. You can override all the default snippets in your Kirby site.)
+/**
+ * @var \tobimori\DreamForm\Models\SubmissionPage $submission
+ * @var \tobimori\DreamForm\Models\FormPage $form
+ * @var array $attr
+ */
+
+use Kirby\Toolkit\A;
+
+?>
+<div <?= attr(A::merge($attr['success'], ['id' => $form->elementId()])) ?>>
+	<strong>Thank you, <?= $submission->valueFor('first-name')->escape() ?>!</strong>
+	<p>We received your application.</p>
+	<p><small>(This is a custom success snippet. You can override all the default snippets in your Kirby site.)</small></p>
 </div>
