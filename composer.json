@@ -9,9 +9,9 @@
     "forms",
     "htmx"
   ],
-  "homepage": "https://plugins.andkindness.com/dreamform",
+  "homepage": "https://www.andkindness.com/dreamform",
   "support": {
-    "docs": "https://plugins.andkindness.com/dreamform/docs",
+    "docs": "https://www.andkindness.com/dreamform/docs",
     "source": "https://github.com/tobimori/dreamform-plainkit"
   },
   "minimum-stability": "stable",

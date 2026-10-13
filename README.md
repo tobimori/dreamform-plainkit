@@ -1,6 +1,6 @@
 # DreamForm Plainkit
 
-This is an example [Kirby](https://getkirby.com) site for [DreamForm](https://plugins.andkindness.com/dreamform), showing a multi-step job application form with a custom field.
+This is an example [Kirby](https://getkirby.com) site for [DreamForm](https://www.andkindness.com/dreamform), showing a multi-step job application form with a custom field.
 
 The form is styled to look like the Kirby Panel, using a single plain CSS file (`assets/css/site.css`) without a build step. It works without JavaScript, but is progressively enhanced with [HTMX 4](https://four.htmx.org/) to avoid full page reloads and to validate fields while typing.
 
@@ -28,4 +28,4 @@ Open `http://localhost:8000` and you're ready to go. `composer install` also cre
 - `site/plugins/dreamform-demo` registers a custom LinkedIn field
 - `site/config/config.php` sets the content salt and enables HTMX 4 mode, live validation and sessionless guards
 
-Read the [demo guide](https://plugins.andkindness.com/dreamform/docs/developers/demo) for a walkthrough.
+Read the [demo guide](https://www.andkindness.com/dreamform/docs/developers/demo) for a walkthrough.

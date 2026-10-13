@@ -16,19 +16,14 @@ snippet('layout', slots: true) ?>
 <p class="text"><?= $page->text() ?></p>
 
 <?php
-/**
- * Render the form selected in the page.
- *
- * The attr array attaches classes to DreamForm's markup,
- * they are defined in /assets/css/site.css
- */
 $choices = [
 	'field' => ['class' => 'field field-choices'],
 	'input' => ['class' => 'choice-input'],
-	'row' => ['class' => 'choice'], // wraps each option
-	'value' => ['class' => 'choice-label'], // label of each option
+	'row' => ['class' => 'choice'],
+	'value' => ['class' => 'choice-label'],
 ];
 
+/* Render the form selected in the page */
 snippet('dreamform/form', [
 	'form' => $page->form()->toPage(),
 	'attr' => [

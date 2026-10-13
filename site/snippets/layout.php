@@ -2,11 +2,8 @@
 
 /**
  * This is a basic layout snippet that renders the site scaffolding.
- * It is used as snippet with slots (https://getkirby.com/docs/guide/templates/snippets#passing-slots-to-snippets).
- *
- * @var \Kirby\Cms\Page $page
- * @var \Kirby\Cms\Site $site
- */ ?>
+ * It is used as snippet with slots (https://www.youtube.com/watch?v=ASmy8mcBWqg).
+ * */ ?>
 <!DOCTYPE html>
 <html lang="<?= $kirby->language()?->code() ?? 'en' ?>">
 
@@ -18,7 +15,6 @@
 
 	<?= css('assets/css/site.css') ?>
 
-	<?php /* HTMX progressively enhances the form, its built-in morphing keeps focus during live validation (precognition) */ ?>
 	<script src="https://unpkg.com/htmx.org@4.0.0/dist/htmx.min.js" integrity="sha384-BvJpBiO8Kh31EqtJe5DRIeWrHWnCGkwytKs9NKFi86Hhw96dEqdEMzZDeK9iEGTc" crossorigin="anonymous"></script>
 </head>
 

@@ -1,10 +1,6 @@
 <?php
 
 /**
- * This is a custom success snippet, shown after the last step of the form.
- * You can override all of DreamForm's snippets by placing a file with
- * the same name in your /site/snippets/dreamform folder.
- *
  * @var \tobimori\DreamForm\Models\SubmissionPage $submission
  * @var \tobimori\DreamForm\Models\FormPage $form
  * @var array $attr

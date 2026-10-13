@@ -1,13 +1,3 @@
-/**
- * DreamForm Plainkit styles
- *
- * Makes the form look like the Kirby Panel. Colors, sizes and components
- * are taken from the Panel's own CSS (panel/src in getkirby/kirby).
- * Dark mode follows the operating system.
- */
-
-/* Tokens ------------------------------------------------------------------- */
-
 :root {
 	color-scheme: light dark;
 
@@ -31,7 +21,6 @@
 	--color-green-900: hsl(80, 60%, 7%);
 	--color-blue-600: hsl(210, 65%, 63%);
 
-	/* light-dark() picks the first color in light mode, the second in dark mode */
 	--color-back: light-dark(var(--color-gray-200), var(--color-gray-900));
 	--color-item: light-dark(var(--color-white), var(--color-gray-850));
 	--color-text: light-dark(var(--color-black), var(--color-white));
@@ -49,8 +38,6 @@
 	--shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.025);
 	--outline: 2px solid var(--color-focus);
 }
-
-/* Reset -------------------------------------------------------------------- */
 
 *,
 *::before,
@@ -85,8 +72,6 @@ body {
 	font-size: var(--text-sm);
 }
 
-/* Layout ------------------------------------------------------------------- */
-
 .view {
 	max-width: 50rem;
 	margin-inline: auto;
@@ -101,12 +86,12 @@ body {
 	padding-block: 1rem;
 	margin-bottom: 2rem;
 	border-bottom: 1px solid var(--color-border);
-}
 
-.header h1 {
-	font-size: 2em;
-	font-weight: 500;
-	line-height: 1.125;
+	h1 {
+		font-size: 2em;
+		font-weight: 500;
+		line-height: 1.125;
+	}
 }
 
 .text {
@@ -114,9 +99,6 @@ body {
 	margin-bottom: 3rem;
 	color: var(--color-text-dimmed);
 }
-
-/* Form grid ---------------------------------------------------------------- */
-/* DreamForm renders each row as a 12 column grid, columns span inline       */
 
 .form,
 .form-column {
@@ -131,28 +113,25 @@ body {
 
 @media (max-width: 40rem) {
 	.form-column {
+		/* dreamform sets the column span inline */
 		grid-column: 1 / -1 !important;
 	}
 }
-
-/* Fields ------------------------------------------------------------------- */
 
 .field-label {
 	display: block;
 	margin-bottom: 0.5rem;
 	font-weight: 500;
-}
 
-/* The required marker */
-.field-label em {
-	font-size: var(--text-xs);
-	font-style: normal;
-	color: var(--color-gray-500);
-}
+	em {
+		font-size: var(--text-xs);
+		font-style: normal;
+		color: var(--color-gray-500);
 
-/* DreamForm sets data-has-error on fields with an error */
-.field[data-has-error] .field-label em {
-	color: var(--color-negative);
+		.field[data-has-error] & {
+			color: var(--color-negative);
+		}
+	}
 }
 
 .field-error {
@@ -160,8 +139,6 @@ body {
 	margin-top: 0.5rem;
 	color: var(--color-negative);
 }
-
-/* Inputs ------------------------------------------------------------------- */
 
 .input {
 	display: block;
@@ -171,19 +148,19 @@ body {
 	border-radius: var(--rounded);
 	outline: 1px solid var(--color-border);
 	background: var(--color-item);
-}
 
-.input::placeholder,
-select.input:has(option[hidden]:checked) {
-	color: var(--color-gray-600);
-}
+	&:focus {
+		outline: var(--outline);
+	}
 
-.input:focus {
-	outline: var(--outline);
-}
+	.field[data-has-error] &:not(:focus) {
+		outline-color: var(--color-negative);
+	}
 
-.field[data-has-error] .input:not(:focus) {
-	outline-color: var(--color-negative);
+	&::placeholder,
+	&:has(option[hidden]:checked) {
+		color: var(--color-gray-600);
+	}
 }
 
 textarea.input {
@@ -201,32 +178,29 @@ select.input {
 
 .input[type="file"] {
 	padding: 0.25rem;
+
+	&::file-selector-button {
+		height: 2rem;
+		margin-right: 0.75rem;
+		padding-inline: 0.75rem;
+		border: 0;
+		border-radius: var(--rounded);
+		background: light-dark(var(--color-gray-300), var(--color-gray-950));
+		color: inherit;
+		font: inherit;
+	}
 }
 
-.input[type="file"]::file-selector-button {
-	height: 2rem;
-	margin-right: 0.75rem;
-	padding-inline: 0.75rem;
-	border: 0;
-	border-radius: var(--rounded);
-	background: light-dark(var(--color-gray-300), var(--color-gray-950));
-	color: inherit;
-	font: inherit;
-}
-
-/* Checkboxes & radios ------------------------------------------------------ */
-
-/* Options are laid out as a grid of cards, label and error span all columns */
 .field-choices {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
 	gap: 0.5rem;
-}
 
-.field-choices .field-label,
-.field-choices .field-error {
-	grid-column: 1 / -1;
-	margin: 0;
+	.field-label,
+	.field-error {
+		grid-column: 1 / -1;
+		margin: 0;
+	}
 }
 
 .choice {
@@ -255,37 +229,35 @@ select.input {
 	box-shadow: var(--shadow);
 	appearance: none;
 	cursor: pointer;
-}
 
-.choice-input[type="radio"] {
-	border-radius: 50%;
-}
+	&:checked {
+		border-color: var(--color-text);
+	}
 
-.choice-input:checked {
-	border-color: var(--color-text);
-}
+	&[type="radio"] {
+		border-radius: 50%;
+	}
 
-.choice-input[type="checkbox"]:checked {
-	background: var(--color-text);
-}
+	&[type="checkbox"]:checked {
+		background: var(--color-text);
 
-.choice-input[type="checkbox"]:checked::after {
-	content: "✓";
-	color: var(--color-back);
-	font-size: var(--text-xs);
-	font-weight: 700;
-	line-height: 1;
-}
+		&::after {
+			content: "✓";
+			color: var(--color-back);
+			font-size: var(--text-xs);
+			font-weight: 700;
+			line-height: 1;
+		}
+	}
 
-.choice-input[type="radio"]:checked::after {
-	content: "";
-	width: 0.5rem;
-	height: 0.5rem;
-	border-radius: 50%;
-	background: var(--color-text);
+	&[type="radio"]:checked::after {
+		content: "";
+		width: 0.5rem;
+		height: 0.5rem;
+		border-radius: 50%;
+		background: var(--color-text);
+	}
 }
-
-/* Buttons ------------------------------------------------------------------ */
 
 .button {
 	display: inline-flex;
@@ -297,10 +269,20 @@ select.input {
 	text-decoration: none;
 	white-space: nowrap;
 	cursor: pointer;
-}
 
-.button:hover {
-	filter: brightness(97%);
+	&:hover {
+		filter: brightness(97%);
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: progress;
+	}
+
+	.field:has(> &) {
+		display: flex;
+		justify-content: flex-end;
+	}
 }
 
 .button-positive {
@@ -312,20 +294,6 @@ select.input {
 	background: none;
 	color: var(--color-text-dimmed);
 }
-
-/* DreamForm disables the button while HTMX submits the form */
-.button:disabled {
-	opacity: 0.5;
-	cursor: progress;
-}
-
-/* Puts the submit button at the end of its row */
-.field:has(> .button) {
-	display: flex;
-	justify-content: flex-end;
-}
-
-/* Boxes -------------------------------------------------------------------- */
 
 .box,
 .form > .field-error {
@@ -344,7 +312,7 @@ select.input {
 	color: var(--color-green-900);
 }
 
-/* Errors for the whole form (e.g. from guards) are shown above all fields */
+/* errors not tied to a field, e.g. from guards */
 .form > .field-error {
 	margin: 0;
 	background: var(--color-red-400);

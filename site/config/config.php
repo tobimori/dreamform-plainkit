@@ -11,8 +11,7 @@ return [
 		'active' => true
 	],
 
-	// Kirby's content salt, loaded from the .env file
-	// DreamForm derives the secret for encrypting HTMX attributes from it
+	// content salt, also used as encryption secret for htmx attributes
 	'content' => [
 		'salt' => fn () => env('CONTENT_SALT')
 	],
@@ -27,15 +26,14 @@ return [
 			'2/3, 1/3'
 		],
 
-		// Enable HTMX 4 Mode with live validation while typing
+		// Enable HTMX 4 Mode
 		'mode' => 'htmx',
 		'htmx' => [
 			'version' => 4
 		],
 		'precognition' => true,
-
-		// Only render error elements when there is an error to show
 		'hideEmptyErrors' => true,
+
 		'guards' => [
 			// Disable CSRF since we want to be sessionless
 			// So that the page can be cached
