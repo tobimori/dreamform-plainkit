@@ -11,6 +11,12 @@ return [
 		'active' => true
 	],
 
+	// Kirby's content salt, loaded from the .env file
+	// DreamForm derives the secret for encrypting HTMX attributes from it
+	'content' => [
+		'salt' => fn () => env('CONTENT_SALT')
+	],
+
 	// Settings for the DreamForm plugin
 	'tobimori.dreamform' => [
 		// Custom layouts in 12 column grid
@@ -21,17 +27,20 @@ return [
 			'2/3, 1/3'
 		],
 
-		// Enable HTMX Mode
+		// Enable HTMX 4 Mode with live validation while typing
 		'mode' => 'htmx',
+		'htmx' => [
+			'version' => 4
+		],
 		'precognition' => true,
+
+		// Only render error elements when there is an error to show
+		'hideEmptyErrors' => true,
 		'guards' => [
 			// Disable CSRF since we want to be sessionless
 			// So that the page can be cached
 			'available' => ['honeypot']
-		],
-
-		// encryption secret for htmx attributes
-		'secret' => fn () => env('DREAMFORM_SECRET')
+		]
 	],
 
 	// Example email settings for Mailpit
