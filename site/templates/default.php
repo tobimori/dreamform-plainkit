@@ -16,13 +16,6 @@ snippet('layout', slots: true) ?>
 <p class="text"><?= $page->text() ?></p>
 
 <?php
-$choices = [
-	'field' => ['class' => 'field field-choices'],
-	'input' => ['class' => 'choice-input'],
-	'row' => ['class' => 'choice'],
-	'value' => ['class' => 'choice-label'],
-];
-
 /* Render the form selected in the page */
 snippet('dreamform/form', [
 	'form' => $page->form()->toPage(),
@@ -37,8 +30,18 @@ snippet('dreamform/form', [
 		'button' => ['class' => 'button button-positive'],
 		'success' => ['class' => 'box box-positive'],
 		'inactive' => ['class' => 'box'],
-		'radio' => $choices,
-		'checkbox' => $choices,
+		'radio' => [
+			'field' => ['class' => 'field field-choices'],
+			'input' => ['class' => 'choice-input'],
+			'row' => ['class' => 'choice'],
+			'value' => ['class' => 'choice-label'],
+		],
+		'checkbox' => [
+			'field' => ['class' => 'field field-choices'],
+			'input' => ['class' => 'choice-input'],
+			'row' => ['class' => 'choice'],
+			'value' => ['class' => 'choice-label'],
+		],
 	]
 ]);
 
